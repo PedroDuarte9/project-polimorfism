@@ -45,10 +45,14 @@ public class Program {
 
             System.out.println("Price: ");
             Double price = sc.nextDouble();
+
             if(opc == 'i'){
                 System.out.println("Customs Fee");
                 double fee = sc.nextDouble();
                 products.add(new ImportedProduct(name, price, fee));
+
+            } else if (opc == 'c') {
+                products.add(new Product(name, price));
 
             } else if (opc == 'u') {
                 System.out.println("Enter the Date dd/MM/yyyy");
